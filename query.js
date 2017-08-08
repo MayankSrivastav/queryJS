@@ -18,4 +18,10 @@
     _filter = _arr.filter,
     _map = _arr.map,
     _document = window.document;
+  
+  // jGet local copy
+  // TODO: pass context argument
+  let jGet = function(selector) {
+    return new jGet.py.init(selector);
+  };
 })(window);
