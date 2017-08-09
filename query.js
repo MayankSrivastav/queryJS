@@ -24,4 +24,12 @@
   let jGet = function(selector) {
     return new jGet.py.init(selector);
   };
+  
+  jGet.py = jGet.prototype = {
+    constructor: jGet,
+
+    map: function(elem, callback) {
+      return jGet.map(elem, callback);
+    }
+  };
 })(window);
