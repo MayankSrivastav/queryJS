@@ -32,4 +32,23 @@
       return jGet.map(elem, callback);
     }
   };
+  
+  // extends the source object with
+  // destination object
+
+  // TODO: Handle single arg
+  jGet.extend = function() {
+    let source, dest, args, len;
+    let i;
+
+    // do nothing if source is not
+    // specified
+    if (arguments.length === 0) {
+      return;
+    }
+
+    i = len = arguments.length;
+
+    source = arguments[0];
+    // dest = arguments[1];
 })(window);
