@@ -51,4 +51,10 @@
 
     source = arguments[0];
     // dest = arguments[1];
+    
+    // TODO: extend the jGet object
+    if (len === 1) {
+    } else {
+      i = 1;
+    }
 })(window);
