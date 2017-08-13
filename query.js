@@ -7,7 +7,7 @@
   Date: 27-June-2017
 */
 
-(function (windo) {
+(function (window) {
   "use strict";
   // Global shorthands
   let _arr = [],
