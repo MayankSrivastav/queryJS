@@ -57,4 +57,29 @@
     } else {
       i = 1;
     }
+     // for every object in args
+    for (; i < len; ++i) {
+      dest = arguments[i];
+      // if dest is undefined or null
+      // or not an object, then move
+      // ahead
+      if (dest && jGet.isObject(dest)) {
+        // TODO: Use for...in for cross
+        // browser compatibility
+        const _keys = Object.keys(dest);
+        // handle empty object case
+        if (_keys.length < 1) {
+          continue;
+        }
+
+        // for every key, assign it to the target
+        // object
+        for (let i = 0; i < _keys.length; ++i) {
+          source[_keys[i]] = dest[_keys[i]];
+        }
+      }
+    }
+
+    return source;
+  };
 })(window);
