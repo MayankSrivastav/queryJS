@@ -82,4 +82,11 @@
 
     return source;
   };
+  
+  // check if the arg is an
+  // object. It could be a
+  // function object also
+  jGet.isObject = function(obj) {
+    return (typeof obj === "object" || typeof obj === "function") && !!obj;
+  };
 })(window);
