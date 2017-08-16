@@ -89,4 +89,16 @@
   jGet.isObject = function(obj) {
     return (typeof obj === "object" || typeof obj === "function") && !!obj;
   };
+  
+  // check if object is an
+  // array
+  jGet.isArray = function(obj) {
+    // object is null or undefined
+    if (!obj) {
+      return false;
+    }
+
+    return Object.prototype.toString.call(obj) === "[object Array]";
+  };
+  
 })(window);
