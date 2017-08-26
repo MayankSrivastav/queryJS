@@ -101,4 +101,22 @@
     return Object.prototype.toString.call(obj) === "[object Array]";
   };
   
+  // check if the object is an Array
+  // like structure, i.e having length
+  // property
+
+  // TODO: refactor; not the best code
+  jGet.isArrayLike = function(obj) {
+    if (
+      obj === null ||
+      obj === undefined ||
+      typeof obj === "boolean" ||
+      typeof obj === "number"
+    ) {
+      return false;
+    }
+
+    return "length" in obj;
+  };
+  
 })(window);
