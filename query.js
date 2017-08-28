@@ -119,4 +119,9 @@
     return "length" in obj;
   };
   
+  jGet.isUndefined = function(obj) {
+    return typeof obj === "undefined";
+    //another way
+    // obj === void 0;
+  };
 })(window);
