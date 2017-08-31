@@ -124,4 +124,15 @@
     //another way
     // obj === void 0;
   };
+  
+  // map utility function,
+  // for now it is used only
+  // on an Array type.
+  // It's extending the jGet Object
+  jGet.map = function(elems, callback) {
+    let len,
+      retArray = [],
+      value;
+
+  };
 })(window);
