@@ -133,6 +133,10 @@
     let len,
       retArray = [],
       value;
-
+     
+    // const type = Object.prototype.toString.call(elems);
+    if (!jGet.isArray(elems)) {
+      throw new TypeError("type is not an array");
+    }
   };
 })(window);
