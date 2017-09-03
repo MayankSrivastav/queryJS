@@ -138,5 +138,16 @@
     if (!jGet.isArray(elems)) {
       throw new TypeError("type is not an array");
     }
+    
+    len = elems.length;
+    for (let i = 0; i < len; ++i) {
+      value = callback(elems[i], i);
+
+      if (value !== null) {
+        retArray.push(value);
+      }
+    }
+
+    return retArray;
   };
 })(window);
