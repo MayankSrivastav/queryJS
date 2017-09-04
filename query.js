@@ -150,4 +150,9 @@
 
     return retArray;
   };
+  
+  // iterate throught the object and call
+  // callback for every element in coll.
+  jGet.each = function(obj, callback) {
+  }
 })(window);
