@@ -154,5 +154,10 @@
   // iterate throught the object and call
   // callback for every element in coll.
   jGet.each = function(obj, callback) {
+    let i;
+    // if obj is fallacy, return silently
+    if (!obj || typeof callback !== "function") {
+      return;
+    }
   }
 })(window);
