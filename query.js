@@ -159,5 +159,17 @@
     if (!obj || typeof callback !== "function") {
       return;
     }
+    if (jGet.isArrayLike(obj)) {
+      let len = obj.length;
+      for (i = 0; i < len; ++i) {
+        callback(i, obj[i]);
+      }
+    } else {
+      // TODO: check for hasOwnProperty,
+      // if needed
+      for (i in obj) {
+        callback(i, obj[i]);
+      }
+    }
   }
 })(window);
