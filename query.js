@@ -171,5 +171,12 @@
         callback(i, obj[i]);
       }
     }
-  }
+  };
+  
+  jGet.makeCamelCase = function(string) {
+    let finalString = "";
+    if (!string) {
+      return string;
+    }    
+  };
 })(window);
