@@ -178,5 +178,20 @@
     if (!string) {
       return string;
     }    
+    let dashes = string.split("-");
+
+    // Already in camelCase
+    if (dashes.length === 0) {
+      return string;
+    } else {
+      finalString = dashes[0];
+      for (let i = 1; i < dashes.length; ++i) {
+        dashes[i] =
+          // dashes[i][0].toUpperCase() + dashes[i].split("").splice(1).join("");
+          dashes[i][0].toUpperCase() + dashes[i].slice(1);
+        finalString += dashes[i];
+      }
+      return finalString;
+    }
   };
 })(window);
