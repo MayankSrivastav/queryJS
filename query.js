@@ -194,4 +194,10 @@
       return finalString;
     }
   };
+  
+  // compare two objects, could be arrays,
+  // strings, objects etc.
+  jGet.equal = function(obj1, obj2) {
+    // TODO: implement
+  };
 })(window);
