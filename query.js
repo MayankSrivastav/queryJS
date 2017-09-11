@@ -200,4 +200,11 @@
   jGet.equal = function(obj1, obj2) {
     // TODO: implement
   };
+  
+  // return items which matched from the
+  // array. The original array is not
+  // modified
+  jGet.grep = function(items, callback) {
+    return _filter.call(items, callback);
+  };
 })(window);
