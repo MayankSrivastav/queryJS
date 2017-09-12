@@ -207,4 +207,10 @@
   jGet.grep = function(items, callback) {
     return _filter.call(items, callback);
   };
+  
+  // Search for an item in the array & return
+  // it's position (if found) in the array
+  jGet.inArray = function(elem, array, ind) {
+    return _arr.indexOf.call(array, elem, ind);
+  };
 })(window);
