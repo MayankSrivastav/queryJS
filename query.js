@@ -213,4 +213,10 @@
   jGet.inArray = function(elem, array, ind) {
     return _arr.indexOf.call(array, elem, ind);
   };
+  
+  // Check and return if the value is a number
+  jGet.isNumeric = function(value) {
+    
+  };
+
 })(window);
