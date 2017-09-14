@@ -216,7 +216,11 @@
   
   // Check and return if the value is a number
   jGet.isNumeric = function(value) {
-    
+    let type = typeof value,
+      val = Number(value);
+    if (type !== "string" && type !== "number") {
+      return false;
+    }
   };
 
 })(window);
