@@ -221,6 +221,12 @@
     if (type !== "string" && type !== "number") {
       return false;
     }
+    
+    if (val && !isNaN(val) && isFinite(val)) {
+      return true;
+    }
+
+    return false;
   };
 
 })(window);
