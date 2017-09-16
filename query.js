@@ -229,4 +229,8 @@
     return false;
   };
 
+  // Check if the object is a function
+  jGet.isFunction = function(obj) {
+    return typeof obj === "function";
+  };
 })(window);
