@@ -233,4 +233,9 @@
   jGet.isFunction = function(obj) {
     return typeof obj === "function";
   };
+  
+  // Check if the object is a window object
+  jGet.isWindow = function(obj) {
+    return obj.window === window;
+  };
 })(window);
