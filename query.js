@@ -238,4 +238,11 @@
   jGet.isWindow = function(obj) {
     return obj.window === window;
   };
+  
+  // Check if the object is a plain object
+  jGet.isPlainObject = function(obj) {
+    return typeof obj === 'object' &&
+      !jGet.isWindow(obj) &&
+      Object.getPrototypeOf(obj) === _proto;
+  };
 })(window);
