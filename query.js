@@ -245,4 +245,15 @@
       !jGet.isWindow(obj) &&
       Object.getPrototypeOf(obj) === _proto;
   };
+  
+  / Trim the string from front & back
+  // Return the object as is, if it's
+  // not a string
+  jGet.trim = function(string) {
+    if (_proto.toString.call(string) !== "[object String]") {
+      return string;
+    }
+    
+    return string.trim();
+  };
 })(window);
