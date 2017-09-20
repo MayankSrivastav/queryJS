@@ -256,4 +256,11 @@
     
     return string.trim();
   };
+  
+  // Constructor initializer for jGet root object
+  let init = jGet.py.init = function(selector) {
+    if (!selector) {
+      return this;
+    }
+  };
 })(window);
