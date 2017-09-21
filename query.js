@@ -263,4 +263,15 @@
       return this;
     }
   };
+  
+  // initialize init's prototype to
+  // jGet's prototype so that it can
+  // be instantiated later
+  init.prototype = jGet.py;
+
+  // Global var for jGet
+  window.$ = window.jGet = jGet;
+
+  // return the single var for use
+  return jGet;
 })(window);
